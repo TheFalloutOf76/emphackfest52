@@ -1,6 +1,8 @@
 <script>
     import StickyHeader from "$lib/components/StickyHeader.svelte";
 
+    import { goto } from "$app/navigation";
+
     async function hash(string) {
         const utf8 = new TextEncoder().encode(string);
         const hashBuffer = await crypto.subtle.digest("SHA-256", utf8);
@@ -25,6 +27,7 @@
             body: JSON.stringify({ username, name, hashedPassword }),
         });
         if (res.ok) {
+            goto("/profile");
         } else {
             warning = await res.text();
         }
