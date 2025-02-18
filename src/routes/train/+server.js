@@ -11,7 +11,7 @@ export async function POST({ request, platform, cookies }) {
 
     const incorrectLetters = totalLetters - correctLetters;
 
-    const scoreChange = 10 * correctLetters - 8 * incorrectLetters;
+    const scoreChange = 100 * correctLetters - 8 * incorrectLetters;
     const session = cookies.get('token');
 
     if (session) {

@@ -158,7 +158,7 @@
                 you got {correctLetters} out of {totalLetters} letters correct!
             </h3>
             <h3>
-                your rating has changed by {10 * correctLetters -
+                your rating has changed by {100 * correctLetters -
                     8 * (totalLetters - correctLetters)} points
             </h3>
             <button class="clickable" onclick={chooseQuestion}>
