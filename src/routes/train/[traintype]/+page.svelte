@@ -165,11 +165,11 @@
                 try another {trainingTypeSingular}
             </button>
         {/if}
-        <div class="debug">
+        <!-- <div class="debug">
             <h3>debug:</h3>
             solution:
             <pre>{targetText}</pre>
-        </div>
+        </div> -->
     </div>
 </main>
 
