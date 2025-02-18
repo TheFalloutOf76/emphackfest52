@@ -79,6 +79,9 @@
         });
 
         for (let i = 0; i < totalLetters; i++) {
+            if (phase != "solution") {
+                return;
+            }
             comparisonTable.push([solutionArr[i], answerTextArr[i]]);
             await new Promise((r) =>
                 setTimeout(r, totalLetters > 20 ? 75 : 250),
