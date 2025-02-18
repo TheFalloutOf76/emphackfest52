@@ -1,0 +1,8 @@
+name = "emphackfest52"
+
+# Bind a D1 database. D1 is Cloudflare’s native serverless SQL database.
+# Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#d1-databases
+[[d1_databases]]
+binding = "database"
+database_name = "emphackfest52"
+database_id = "8c3fbaa8-6e74-4b1b-b339-8211883bee02"
