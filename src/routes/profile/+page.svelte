@@ -6,7 +6,7 @@
 
     import StickyHeader from "$lib/components/StickyHeader.svelte";
 
-    const accuracy = Math.round(10000 * data.user.totalCorrect / data.user.totalAttempted) / 100;
+    const accuracy = Math.round(10000 * data.user.totalCorrect / data.user.totalAttempted) / 100 || 0;
     const totalIncorrect = data.user.totalAttempted - data.user.totalCorrect;
 
     let chart;

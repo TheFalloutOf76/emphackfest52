@@ -5,6 +5,8 @@
     }
     const trainingTypeSingular = data.trainingType.slice(0, -1);
 
+    import { blur } from "svelte/transition";
+
     import StickyHeader from "$lib/components/StickyHeader.svelte";
 
     import LetterDiff from "$lib/components/LetterDiff.svelte";
@@ -122,7 +124,11 @@
         {/if}
         {#if phase == "attempt"}
             <h3>your {trainingTypeSingular} is:</h3>
-            <div class="targetText" style:--size={targetTextScaling + "px"}>
+            <div
+                class="targetText"
+                style:--size={targetTextScaling + "px"}
+                in:blur={{ duration: 750 }}
+            >
                 {targetText}
             </div>
             <h3>what does the ASL above say?</h3>
