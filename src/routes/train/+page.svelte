@@ -12,7 +12,7 @@
         <h2>get started by choosing a training method below:</h2>
         <div class="optionSel">
             <TrainingOption title="letters" example="a" link="/train/letters">
-                get a simple introduction to ASL by one letter at a time
+                get a simple introduction to ASL one letter at a time
             </TrainingOption>
             <TrainingOption title="words" example="hackathon" link="/train/words">
                 for a more challenging experience, practice words instead of letters
