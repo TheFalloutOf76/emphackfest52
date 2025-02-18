@@ -4,6 +4,8 @@
     const { data } = $props();
     console.log(data);
 
+    import { goto } from '$app/navigation';
+
     import StickyHeader from "$lib/components/StickyHeader.svelte";
 
     const accuracy = Math.round(10000 * data.user.totalCorrect / data.user.totalAttempted) / 100 || 0;
@@ -34,6 +36,10 @@
 <main class="mostlyCentered content">
     <div class="box">
         <h1>personal statistics</h1>
+        <button class="clickable" onclick={async () => {
+            await fetch('/login/logout');
+            goto('/login');
+        }}>Log out</button>
         <h2>Hi {data.user.name}! Thank you for learning ASL with us. Here's a summary of your total training so far:</h2>
         <h2>your rating: {data.user.rating}</h2>
         <h2>total ASL signs interpreted: {data.user.totalAttempted}</h2>
@@ -62,5 +68,9 @@
     canvas {
         max-height: 400px;
         margin: 1rem auto;
+    }
+
+    button {
+
     }
 </style>
